@@ -1,0 +1,9 @@
+server:
+  port: 8090
+application: 
+  specific: 
+    prop: app-specific
+cloud: 
+  name: sc-app
+  purpose: testing
+  scope: app-specific  

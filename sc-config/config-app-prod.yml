@@ -1,0 +1,10 @@
+server:
+  port: 8080
+application: 
+ specific: 
+    prop: app-prod-specific
+ profile: 
+    mode: prod
+    name: production
+
+ 
