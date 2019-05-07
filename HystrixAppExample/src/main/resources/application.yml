@@ -1,0 +1,18 @@
+server:
+  port: 5000 #this makes spring to spin up at random available port
+spring:
+  application:
+    name: Hystrix-Circuit-Breaker
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+app:
+ service:
+  url: http://app-serv/ping/instance
+  

@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: zuul-proxy
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: false   
+zuul:
+  routes:
+    s:
+     path: /s/**
+     service-id: simple-service
+     strip-prefix: true
+    d:
+      path: /d/**
+      service-id: difficult-service
+      strip-prefix: true
+    a:
+      path: /a/**
+      service-id: app-serv
+      strip-prefix: true  
+            
+            
+              
+#ribbon:
+#  http:
+#    client:
+#      enabled: false
